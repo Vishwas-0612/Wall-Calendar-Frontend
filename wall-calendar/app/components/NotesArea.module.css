@@ -1,0 +1,42 @@
+.notesSection {
+  flex: 0 0 250px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.notesTitle {
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.notesList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  flex: 1;
+}
+
+.noteLine {
+  border: none;
+  border-bottom: 1px solid var(--border-color);
+  background: transparent;
+  padding-bottom: 0.2rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  outline: none;
+  resize: none;
+}
+.noteLine:focus {
+  border-bottom-color: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+  .notesSection {
+    flex: none;
+    order: 2; /* Move notes below calendar */
+  }
+}

@@ -1,0 +1,10 @@
+import WallCalendar from "./components/WallCalendar";
+import styles from "./page.module.css";
+
+export default function Home() {
+  return (
+    <main className={styles.mainWrapper}>
+      <WallCalendar />
+    </main>
+  );
+}

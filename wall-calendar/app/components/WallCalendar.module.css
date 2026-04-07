@@ -1,0 +1,127 @@
+.calendarWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin-top: 25px; /* Give room above for the hanger */
+}
+
+.hanger {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 0;
+}
+
+.nail {
+  width: 14px;
+  height: 14px;
+  background: radial-gradient(circle at 30% 30%, #aaaaaa, #222222);
+  border-radius: 50%;
+  box-shadow: 1px 3px 5px rgba(0,0,0,0.6);
+  position: relative;
+  z-index: 2;
+}
+
+.wire {
+  width: 44px;
+  height: 44px;
+  border-top: 2px solid #555;
+  border-left: 2px solid #555;
+  transform: rotate(45deg);
+  margin-top: -12px;
+  z-index: 1;
+}
+
+.calendarContainer {
+  width: 100%;
+  max-width: 800px;
+  background: var(--panel-bg);
+  border-radius: 4px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.spiralBinder {
+  height: 20px;
+  background: url('data:image/svg+xml;utf8,<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="4" fill="%23444"/><rect x="8" y="0" width="4" height="12" fill="%23888" rx="2"/></svg>') repeat-x;
+  background-position: center top;
+  margin-top: -10px;
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  z-index: 10;
+}
+
+.heroSection {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-image: url('https://media.gettyimages.com/id/2149530993/photo/digital-human-head-concept-for-ai-metaverse-and-facial-recognition-technology.jpg?s=612x612&w=0&k=20&c=IduORJUs1c1s0m2SXQANsK8IUhtlz8QApsLxNYOYrXQ=');
+  background-size: cover;
+  background-position: center;
+  background-color: #ddd;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 75% 85%, 50% 100%, 25% 85%, 0 100%);
+}
+
+.heroOverlay {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: var(--accent-color);
+  padding: 4rem 4rem 5.5rem 4rem;
+  color: white;
+  text-align: right;
+  clip-path: polygon(0 30%, 100% 0, 100% 100%, 0% 100%);
+}
+
+.heroOverlay h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 0.25rem;
+  letter-spacing: 2px;
+}
+
+.heroOverlay h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.lowerSection {
+  display: flex;
+  flex-direction: row;
+  padding: 2rem 3rem 3rem 1rem;
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .lowerSection {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+  
+  .heroSection {
+    height: 250px;
+  }
+
+  .heroOverlay {
+    padding: 2rem 2rem 3rem 2rem;
+    clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  .heroOverlay h1 {
+    font-size: 2rem;
+  }
+
+  .heroOverlay h2 {
+    font-size: 1.1rem;
+    margin-bottom: 0.1rem;
+  }
+}

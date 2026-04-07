@@ -1,0 +1,116 @@
+.calendarGridSection {
+  flex: 1;
+}
+
+.daysHeader {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-bottom: 1rem;
+}
+
+.dayName {
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-dark);
+}
+
+.weekendText {
+  color: var(--weekend-color);
+}
+
+.daysGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+  row-gap: 1rem;
+}
+
+.dateCellContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.dateCell {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+  color: var(--text-dark);
+  position: relative;
+  z-index: 1;
+}
+
+.otherMonth {
+  color: #d1d5db;
+  font-weight: 400;
+}
+
+.weekendCell {
+  color: var(--weekend-color);
+}
+
+.dateCell:hover:not(.otherMonth) {
+  background-color: var(--highlight-bg);
+}
+
+/* Range Selection Mechanics */
+.selectedStart,
+.selectedEnd {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.selectedInBetween {
+  background-color: var(--highlight-bg);
+  border-radius: 0;
+  width: 100%;
+}
+
+.inBetween::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 40px;
+  transform: translateY(-50%);
+  background-color: var(--highlight-bg);
+  z-index: 0;
+}
+
+.startNode::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: -5px;
+  height: 40px;
+  transform: translateY(-50%);
+  background-color: var(--highlight-bg);
+  z-index: 0;
+}
+
+.endNode::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -5px;
+  right: 50%;
+  height: 40px;
+  transform: translateY(-50%);
+  background-color: var(--highlight-bg);
+  z-index: 0;
+}
