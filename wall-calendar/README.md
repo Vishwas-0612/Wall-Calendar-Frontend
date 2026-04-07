@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Wall Calendar Component
 
-## Getting Started
+An interactive, responsive Wall Calendar component built with Next.js and Vanilla CSS. This project was built to translate a physical wall-calendar aesthetic into a functional digital component.
 
-First, run the development server:
+## ✨ Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Wall Calendar Aesthetic:** Custom CSS architecture carefully models a real physical calendar, utilizing diagonal geometric clip-paths, top-anchored spiral binders, and a pseudo-element hanging nail.
+- **Day Range Selector:** Users can seamlessly click to select start and end dates. The component visually tracks boundaries with specific highlighted states.
+- **Persistent Notes Area:** An integrated 7-line memo pad that instantly saves entries to your browser's `localStorage`, retaining information across page reloads.
+- **Responsiveness Guarantee:** A pristine mobile layout leveraging CSS media queries that transitions the hero image and perfectly stacks the calendar and notes section for touch devices.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠 Technology & Architecture Choices
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Framework:** Next.js (React) to take advantage of component isolation and efficient rendering.
+- **Styling:** Strictly Vanilla CSS Variables (`globals.css`) structured with **CSS Modules**. No external frameworks like Tailwind were used, maximizing bespoke design accuracy and reducing bundle bloat.
+- **State Management:** Native React Hooks (`useState`, `useEffect`) manage range state, while client-side DOM syncs cleanly with standard Web Storage API (`localStorage`).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Running Locally
 
-## Learn More
+1. **Install Dependencies:**
+   ```bash
+   npm install
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. **Start the Development Server:**
+   ```bash
+   npm run dev
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. **Verify:** Open your browser and navigate to `http://localhost:3000` to view the application.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🌍 Deploying to Vercel
 
-## Deploy on Vercel
+Since this project leverages standard Next.js building semantics, it is optimized for Vercel out of the box.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Push your repository to GitHub, GitLab, or Bitbucket.
+2. Visit [Vercel](https://vercel.com/new).
+3. Select your repository and click **Deploy**. Vercel will auto-detect Next.js and apply the correct build settings (`npm run build`).
