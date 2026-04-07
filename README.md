@@ -1,7 +1,7 @@
 # Wall Calendar Component
 
 <div align="center">
-  <img src="./wall-calendar/public/screenshot.png" alt="Wall Calendar Screenshot" width="800" />
+  <img src="./wall-calendar/public/screenshot.png" alt="Wall Calendar Screenshot" width="800" heigh='100' />
 </div>
 
 An interactive, responsive Wall Calendar component built with Next.js and Vanilla CSS. This project was built to translate a physical wall-calendar aesthetic into a functional digital component.
