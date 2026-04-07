@@ -37,6 +37,5 @@ An interactive, responsive Wall Calendar component built with Next.js and Vanill
 
 Since this project leverages standard Next.js building semantics, it is optimized for Vercel out of the box.
 
-1. Push your repository to GitHub, GitLab, or Bitbucket.
-2. Visit [Vercel](https://vercel.com/new).
-3. Select your repository and click **Deploy**. Vercel will auto-detect Next.js and apply the correct build settings (`npm run build`).
+1. Visit [Vercel](https://wall-calendar-frontend.vercel.app/).
+
